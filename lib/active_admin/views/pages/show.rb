@@ -48,7 +48,7 @@ module ActiveAdmin
           end
 
           def default_attribute_table_rows
-            resource.class.columns.collect{|column| column.name.to_sym }
+            resource.class.fields.keys.collect{|column| column.to_sym }
           end
         end
 
